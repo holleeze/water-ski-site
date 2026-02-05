@@ -1,201 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | Saskatoon Water Ski Club</title>
-    <meta name="description" content="Photos and videos from the Saskatoon Water Ski Club - see our athletes in action on the South Saskatchewan River.">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
-    
-    <style>
-        /* Gallery-specific styles */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        
-        .gallery-item {
-            position: relative;
-            aspect-ratio: 4/3;
-            border-radius: 15px;
-            overflow: hidden;
-            background: linear-gradient(135deg, var(--teal-bright), var(--teal-dark));
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        
-        .gallery-item:hover {
-            transform: scale(1.02);
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .gallery-placeholder {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgba(255,255,255,0.5);
-            font-size: 0.9rem;
-        }
-        
-        .video-embed {
-            aspect-ratio: 16/9;
-            border-radius: 15px;
-            overflow: hidden;
-            margin-top: 2rem;
-        }
-        
-        .video-embed iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Saskatoon Water Ski Club</title>
+  <meta name="description"
+    content="Photos and videos from the Saskatoon Water Ski Club - see our athletes in action on the South Saskatchewan River.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Gallery-specific styles */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      aspect-ratio: 4/3;
+      border-radius: 15px;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--teal-bright), var(--teal-dark));
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.02);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.9rem;
+    }
+
+    .video-embed {
+      aspect-ratio: 16/9;
+      border-radius: 15px;
+      overflow: hidden;
+      margin-top: 2rem;
+    }
+
+    .video-embed iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav>
-        <a href="index.html" class="logo">
-            <img src="images/logo.jpg" alt="Saskatoon Water Ski Club">
-        </a>
-        <ul class="nav-links">
-            <li><a href="about.html">About</a></li>
-            <li><a href="programs.html">Programs</a></li>
-            <li><a href="gallery.html" class="active">Gallery</a></li>
-            <li><a href="membership.html">Membership</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <a href="contact.html" class="nav-cta">Book a Lesson</a>
-    </nav>
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html" class="logo">
+      <img src="images/logo.jpg" alt="Saskatoon Water Ski Club">
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="membership.html">Membership</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Book a Lesson</a>
+  </nav>
 
-    <!-- Page Header -->
-    <header class="page-header">
-        <h1>GALLERY</h1>
-        <p>Action shots and memories from on the water</p>
-    </header>
+  <!-- Page Header -->
+  <header class="page-header">
+    <h1>GALLERY</h1>
+    <p>Action shots and memories from on the water</p>
+  </header>
 
-    <!-- Video Section -->
-    <section class="content-section">
-        <h2>📹 FEATURED VIDEO</h2>
-        <p>Check out highlights from the Canadian WaterSki Open and other events hosted at SWSC.</p>
-        
-        <div class="video-embed">
-            <!-- Replace with actual YouTube/Vimeo embed -->
-            <iframe 
-                src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
-                title="SWSC Video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
-        </div>
-    </section>
+  <!-- Video Section -->
+  <section class="content-section">
+    <h2>📹 FEATURED VIDEO</h2>
+    <p>Check out highlights from the Canadian WaterSki Open and other events hosted at SWSC.</p>
 
-    <!-- Photo Gallery -->
-    <section class="content-section" style="background: var(--cream-warm); max-width: none; padding: 6rem 4rem;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <h2>📸 PHOTO GALLERY</h2>
-            <p>Moments captured at SWSC - competition days, lessons, and summer fun.</p>
-            
-            <div class="gallery-grid">
-                <!-- Replace placeholders with actual images -->
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">[ gallery-01.jpg ]</div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">[ gallery-02.jpg ]</div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">[ gallery-03.jpg ]</div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">[ gallery-04.jpg ]</div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">[ gallery-05.jpg ]</div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">[ gallery-06.jpg ]</div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">[ gallery-07.jpg ]</div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">[ gallery-08.jpg ]</div>
-                </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">[ gallery-09.jpg ]</div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="video-embed">
+      <!-- Replace with actual YouTube/Vimeo embed -->
+      <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="SWSC Video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
 
-    <!-- Social CTA -->
-    <section class="cta">
-        <h2>SEE MORE ON SOCIAL</h2>
-        <p>Follow us on Instagram and Facebook for the latest photos and updates from the club.</p>
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-            <a href="https://www.instagram.com/saskatoonwaterskiclub/" target="_blank" class="btn-primary">Follow on Instagram</a>
-            <a href="https://www.facebook.com/saskatoonwaterskiclub" target="_blank" class="btn-outline" style="color: var(--teal-dark);">Follow on Facebook</a>
-        </div>
-    </section>
+  <!-- Photo Gallery -->
+  <section class="content-section" style="background: var(--cream-warm); max-width: none; padding: 6rem 4rem;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2>📸 PHOTO GALLERY</h2>
+      <p>Moments captured at SWSC - competition days, lessons, and summer fun.</p>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-brand">
-            <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="Saskatoon Water Ski Club">
-            </a>
-            <p>Saskatoon Water Ski Club has been Saskatchewan's premier water sports destination since 1972.</p>
+      <div class="gallery-grid">
+        <!-- Replace placeholders with actual images -->
+        <div class="gallery-item">
+          <div class="gallery-placeholder">[ gallery-01.jpg ]</div>
         </div>
-        <div class="footer-col">
-            <h4>QUICK LINKS</h4>
-            <ul>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="about.html#coaches">Our Coaches</a></li>
-                <li><a href="programs.html">Programs</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-            </ul>
+        <div class="gallery-item">
+          <div class="gallery-placeholder">[ gallery-02.jpg ]</div>
         </div>
-        <div class="footer-col">
-            <h4>MEMBERSHIP</h4>
-            <ul>
-                <li><a href="membership.html">Join the Club</a></li>
-                <li><a href="contact.html">Book a Lesson</a></li>
-                <li><a href="#">Event Calendar</a></li>
-                <li><a href="#">FAQ</a></li>
-            </ul>
+        <div class="gallery-item">
+          <div class="gallery-placeholder">[ gallery-03.jpg ]</div>
         </div>
-        <div class="footer-col">
-            <h4>CONTACT</h4>
-            <ul>
-                <li><a href="tel:3062273052">306.227.3052</a></li>
-                <li><a href="mailto:info@swsc.ca">info@swsc.ca</a></li>
-                <li>Saskatoon, SK</li>
-            </ul>
+        <div class="gallery-item">
+          <div class="gallery-placeholder">[ gallery-04.jpg ]</div>
         </div>
-        <div class="footer-bottom">
-            <span>© 2026 Saskatoon Water Ski Club. All rights reserved.</span>
-            <div class="social-links">
-                <a href="https://www.instagram.com/saskatoonwaterskiclub/" target="_blank">IG</a>
-                <a href="https://www.facebook.com/saskatoonwaterskiclub" target="_blank">FB</a>
-                <a href="http://x.com/SWSClub" target="_blank">X</a>
-            </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder">[ gallery-05.jpg ]</div>
         </div>
-    </footer>
+        <div class="gallery-item">
+          <div class="gallery-placeholder">[ gallery-06.jpg ]</div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder">[ gallery-07.jpg ]</div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder">[ gallery-08.jpg ]</div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-placeholder">[ gallery-09.jpg ]</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social CTA -->
+  <section class="cta">
+    <h2>SEE MORE ON SOCIAL</h2>
+    <p>Follow us on Instagram and Facebook for the latest photos and updates from the club.</p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <a href="https://www.instagram.com/saskatoonwaterskiclub/" target="_blank" class="btn-primary">Follow on
+        Instagram</a>
+      <a href="https://www.facebook.com/saskatoonwaterskiclub" target="_blank" class="btn-outline"
+        style="color: var(--teal-dark);">Follow on Facebook</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-brand">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Saskatoon Water Ski Club">
+      </a>
+      <p>Saskatoon Water Ski Club has been Saskatchewan's premier water sports destination since 1972.</p>
+    </div>
+    <div class="footer-col">
+      <h4>QUICK LINKS</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="about.html#coaches">Our Coaches</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>MEMBERSHIP</h4>
+      <ul>
+        <li><a href="membership.html">Join the Club</a></li>
+        <li><a href="contact.html">Book a Lesson</a></li>
+        <li><a href="#">Event Calendar</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>CONTACT</h4>
+      <ul>
+        <li><a href="tel:3062273052">306.227.3052</a></li>
+        <li><a href="mailto:info@swsc.ca">info@swsc.ca</a></li>
+        <li>Saskatoon, SK</li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Saskatoon Water Ski Club. All rights reserved.</span>
+      <div class="social-links">
+        <a href="https://www.instagram.com/saskatoonwaterskiclub/" target="_blank">IG</a>
+        <a href="https://www.facebook.com/saskatoonwaterskiclub" target="_blank">FB</a>
+        <a href="http://x.com/SWSClub" target="_blank">X</a>
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>
