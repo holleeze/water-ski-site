@@ -46,6 +46,18 @@ export const faqData = [
   }
 ];
 
+/**
+ * @typedef {Object} Coach
+ * @property {string} name
+ * @property {string} role
+ * @property {string} bio
+ * @property {string} image  Emoji or URL
+ */
+
+/**
+ * List of coaches for the site
+ * @type {Coach[]}
+ */
 export const coaches = [
   {
     name: "Sam Edwards",
@@ -73,6 +85,17 @@ export const coaches = [
   }
 ];
 
+/**
+ * @typedef {Object} Athlete
+ * @property {string} name
+ * @property {string} bioLink
+ * @property {string} image
+ */
+
+/**
+ * Athletes data
+ * @type {Athlete[]}
+ */
 export const athletes = [
   {
     name: "Carter Lucas",
@@ -116,6 +139,18 @@ export const athletes = [
   },
 ]
 
+/**
+ * @typedef {Object} BoardMember
+ * @property {string} name
+ * @property {string} title
+ * @property {string} occupation
+ * @property {string} image
+ */
+
+/**
+ * Board members data
+ * @type {BoardMember[]}
+ */
 export const boardMembers = [
   {
     name: "Jim Clunie",
