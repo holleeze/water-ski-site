@@ -1,319 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Membership | Saskatoon Water Ski Club</title>
-    <meta name="description" content="Join the Saskatoon Water Ski Club - membership options for individuals, families, and competitive athletes.">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
-    
-    <style>
-        /* Membership-specific styles */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .pricing-card {
-            background: white;
-            border-radius: 20px;
-            padding: 2.5rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            text-align: center;
-            position: relative;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .pricing-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-        }
-        
-        .pricing-card.featured {
-            border: 3px solid var(--gold);
-        }
-        
-        .pricing-card.featured::before {
-            content: 'MOST POPULAR';
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--gold);
-            color: var(--black);
-            padding: 0.25rem 1rem;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.05em;
-        }
-        
-        .pricing-card h3 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.75rem;
-            color: var(--teal-dark);
-            margin-bottom: 0.5rem;
-        }
-        
-        .pricing-card .price {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 3.5rem;
-            color: var(--teal-bright);
-            line-height: 1;
-            margin: 1rem 0;
-        }
-        
-        .pricing-card .price span {
-            font-size: 1rem;
-            color: rgba(10, 10, 10, 0.5);
-        }
-        
-        .pricing-card .description {
-            color: rgba(10, 10, 10, 0.65);
-            margin-bottom: 1.5rem;
-        }
-        
-        .pricing-card ul {
-            list-style: none;
-            text-align: left;
-            margin-bottom: 2rem;
-        }
-        
-        .pricing-card li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            color: rgba(10, 10, 10, 0.75);
-        }
-        
-        .pricing-card li::before {
-            content: '✓ ';
-            color: var(--gold);
-            font-weight: bold;
-        }
-        
-        .benefits-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .benefit-item {
-            display: flex;
-            gap: 1rem;
-            align-items: flex-start;
-        }
-        
-        .benefit-icon {
-            font-size: 2rem;
-            line-height: 1;
-        }
-        
-        .benefit-item h4 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.25rem;
-            color: var(--teal-dark);
-            margin-bottom: 0.25rem;
-        }
-        
-        .benefit-item p {
-            color: rgba(10, 10, 10, 0.65);
-            font-size: 0.95rem;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership | Saskatoon Water Ski Club</title>
+  <meta name="description"
+    content="Join the Saskatoon Water Ski Club - membership options for individuals, families, and competitive athletes.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Membership-specific styles */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .pricing-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .pricing-card.featured {
+      border: 3px solid var(--gold);
+    }
+
+    .pricing-card.featured::before {
+      content: 'MOST POPULAR';
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: var(--black);
+      padding: 0.25rem 1rem;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .pricing-card h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.75rem;
+      color: var(--teal-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .pricing-card .price {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3.5rem;
+      color: var(--teal-bright);
+      line-height: 1;
+      margin: 1rem 0;
+    }
+
+    .pricing-card .price span {
+      font-size: 1rem;
+      color: rgba(10, 10, 10, 0.5);
+    }
+
+    .pricing-card .description {
+      color: rgba(10, 10, 10, 0.65);
+      margin-bottom: 1.5rem;
+    }
+
+    .pricing-card ul {
+      list-style: none;
+      text-align: left;
+      margin-bottom: 2rem;
+    }
+
+    .pricing-card li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      color: rgba(10, 10, 10, 0.75);
+    }
+
+    .pricing-card li::before {
+      content: '✓ ';
+      color: var(--gold);
+      font-weight: bold;
+    }
+
+    .benefits-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .benefit-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .benefit-icon {
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .benefit-item h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.25rem;
+      color: var(--teal-dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .benefit-item p {
+      color: rgba(10, 10, 10, 0.65);
+      font-size: 0.95rem;
+    }
+  </style>
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav>
-        <a href="index.html" class="logo">
-            <img src="images/logo.png" alt="Saskatoon Water Ski Club">
-        </a>
-        <ul class="nav-links">
-            <li><a href="about.html">About</a></li>
-            <li><a href="programs.html">Programs</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="membership.html" class="active">Membership</a></li>
-            <li><a href="contact.html">Contact</a></li>
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="Saskatoon Water Ski Club">
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="membership.html" class="active">Membership</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Book a Lesson</a>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <h1>MEMBERSHIP</h1>
+    <p>Join Saskatchewan's premier water ski community</p>
+  </header>
+
+  <!-- Pricing Section -->
+  <section class="content-section">
+    <h2>MEMBERSHIP OPTIONS</h2>
+    <p>Choose the membership that's right for you. All memberships include access to our facility during operating hours
+      and member rates on lessons.</p>
+
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>INDIVIDUAL</h3>
+        <div class="price">$XXX <span>/season</span></div>
+        <p class="description">Perfect for solo skiers</p>
+        <ul>
+          <li>Full season access</li>
+          <li>Member lesson rates</li>
+          <li>Equipment rentals</li>
+          <li>Club events access</li>
         </ul>
-        <a href="contact.html" class="nav-cta">Book a Lesson</a>
-    </nav>
+        <a href="contact.html" class="btn-primary" style="width: 100%;">Join Now</a>
+      </div>
 
-    <!-- Page Header -->
-    <header class="page-header">
-        <h1>MEMBERSHIP</h1>
-        <p>Join Saskatchewan's premier water ski community</p>
-    </header>
+      <div class="pricing-card featured">
+        <h3>FAMILY</h3>
+        <div class="price">$XXX <span>/season</span></div>
+        <p class="description">Best value for families</p>
+        <ul>
+          <li>Up to 4 family members</li>
+          <li>Full season access</li>
+          <li>Member lesson rates</li>
+          <li>Equipment rentals</li>
+          <li>Priority booking</li>
+          <li>Club events access</li>
+        </ul>
+        <a href="contact.html" class="btn-primary" style="width: 100%;">Join Now</a>
+      </div>
 
-    <!-- Pricing Section -->
-    <section class="content-section">
-        <h2>MEMBERSHIP OPTIONS</h2>
-        <p>Choose the membership that's right for you. All memberships include access to our facility during operating hours and member rates on lessons.</p>
-        
-        <div class="pricing-grid">
-            <div class="pricing-card">
-                <h3>INDIVIDUAL</h3>
-                <div class="price">$XXX <span>/season</span></div>
-                <p class="description">Perfect for solo skiers</p>
-                <ul>
-                    <li>Full season access</li>
-                    <li>Member lesson rates</li>
-                    <li>Equipment rentals</li>
-                    <li>Club events access</li>
-                </ul>
-                <a href="contact.html" class="btn-primary" style="width: 100%;">Join Now</a>
-            </div>
-            
-            <div class="pricing-card featured">
-                <h3>FAMILY</h3>
-                <div class="price">$XXX <span>/season</span></div>
-                <p class="description">Best value for families</p>
-                <ul>
-                    <li>Up to 4 family members</li>
-                    <li>Full season access</li>
-                    <li>Member lesson rates</li>
-                    <li>Equipment rentals</li>
-                    <li>Priority booking</li>
-                    <li>Club events access</li>
-                </ul>
-                <a href="contact.html" class="btn-primary" style="width: 100%;">Join Now</a>
-            </div>
-            
-            <div class="pricing-card">
-                <h3>COMPETITIVE</h3>
-                <div class="price">$XXX <span>/season</span></div>
-                <p class="description">For serious athletes</p>
-                <ul>
-                    <li>Everything in Individual</li>
-                    <li>Team training sessions</li>
-                    <li>Competition support</li>
-                    <li>Video analysis</li>
-                    <li>Priority coach access</li>
-                </ul>
-                <a href="contact.html" class="btn-primary" style="width: 100%;">Join Now</a>
-            </div>
-        </div>
-    </section>
+      <div class="pricing-card">
+        <h3>COMPETITIVE</h3>
+        <div class="price">$XXX <span>/season</span></div>
+        <p class="description">For serious athletes</p>
+        <ul>
+          <li>Everything in Individual</li>
+          <li>Team training sessions</li>
+          <li>Competition support</li>
+          <li>Video analysis</li>
+          <li>Priority coach access</li>
+        </ul>
+        <a href="contact.html" class="btn-primary" style="width: 100%;">Join Now</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Benefits Section -->
-    <section class="content-section" style="background: var(--cream-warm); max-width: none; padding: 6rem 4rem;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <h2>MEMBER BENEFITS</h2>
-            <p>When you join SWSC, you become part of a community dedicated to the love of water sports.</p>
-            
-            <div class="benefits-list">
-                <div class="benefit-item">
-                    <div class="benefit-icon">🚤</div>
-                    <div>
-                        <h4>BOAT TIME</h4>
-                        <p>Access to our tournament-quality boats during club hours.</p>
-                    </div>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">🎓</div>
-                    <div>
-                        <h4>PRO INSTRUCTION</h4>
-                        <p>Discounted rates on lessons with our certified coaches.</p>
-                    </div>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">🎿</div>
-                    <div>
-                        <h4>EQUIPMENT</h4>
-                        <p>Access to rental equipment including skis, boards, and vests.</p>
-                    </div>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">🏆</div>
-                    <div>
-                        <h4>EVENTS</h4>
-                        <p>Invitations to member-only events, BBQs, and competitions.</p>
-                    </div>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">👨‍👩‍👧‍👦</div>
-                    <div>
-                        <h4>COMMUNITY</h4>
-                        <p>Join a welcoming group of water sports enthusiasts.</p>
-                    </div>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">📅</div>
-                    <div>
-                        <h4>PRIORITY BOOKING</h4>
-                        <p>First access to lesson slots and special programs.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Benefits Section -->
+  <section class="content-section" style="background: var(--cream-warm); max-width: none; padding: 6rem 4rem;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2>MEMBER BENEFITS</h2>
+      <p>When you join SWSC, you become part of a community dedicated to the love of water sports.</p>
 
-    <!-- Season Info -->
-    <section class="content-section">
-        <h2>SEASON INFORMATION</h2>
-        <p>Our season typically runs from late May through early September, weather permitting. The South Saskatchewan River provides excellent conditions for water skiing throughout the summer months.</p>
-        <p><strong>Operating Hours:</strong> Vary by day - contact us for current schedule.</p>
-        <p><strong>Location:</strong> South Saskatchewan River, Saskatoon area.</p>
-        <p>Questions about membership? <a href="contact.html" style="color: var(--teal-bright);">Get in touch</a> and we'll be happy to help!</p>
-    </section>
+      <div class="benefits-list">
+        <div class="benefit-item">
+          <div class="benefit-icon">🚤</div>
+          <div>
+            <h4>BOAT TIME</h4>
+            <p>Access to our tournament-quality boats during club hours.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">🎓</div>
+          <div>
+            <h4>PRO INSTRUCTION</h4>
+            <p>Discounted rates on lessons with our certified coaches.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">🎿</div>
+          <div>
+            <h4>EQUIPMENT</h4>
+            <p>Access to rental equipment including skis, boards, and vests.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">🏆</div>
+          <div>
+            <h4>EVENTS</h4>
+            <p>Invitations to member-only events, BBQs, and competitions.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">👨‍👩‍👧‍👦</div>
+          <div>
+            <h4>COMMUNITY</h4>
+            <p>Join a welcoming group of water sports enthusiasts.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">📅</div>
+          <div>
+            <h4>PRIORITY BOOKING</h4>
+            <p>First access to lesson slots and special programs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- CTA Section -->
-    <section class="cta">
-        <h2>READY TO JOIN?</h2>
-        <p>Become part of Saskatchewan's most welcoming water sports community.</p>
-        <a href="contact.html" class="btn-primary">Contact Us to Sign Up</a>
-    </section>
+  <!-- Season Info -->
+  <section class="content-section">
+    <h2>SEASON INFORMATION</h2>
+    <p>Our season typically runs from late May through early September, weather permitting. The South Saskatchewan River
+      provides excellent conditions for water skiing throughout the summer months.</p>
+    <p><strong>Operating Hours:</strong> Vary by day - contact us for current schedule.</p>
+    <p><strong>Location:</strong> South Saskatchewan River, Saskatoon area.</p>
+    <p>Questions about membership? <a href="contact.html" style="color: var(--teal-bright);">Get in touch</a> and we'll
+      be happy to help!</p>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-brand">
-            <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="Saskatoon Water Ski Club">
-            </a>
-            <p>Saskatoon Water Ski Club has been Saskatchewan's premier water sports destination since 1972.</p>
-        </div>
-        <div class="footer-col">
-            <h4>QUICK LINKS</h4>
-            <ul>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="about.html#coaches">Our Coaches</a></li>
-                <li><a href="programs.html">Programs</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>MEMBERSHIP</h4>
-            <ul>
-                <li><a href="membership.html">Join the Club</a></li>
-                <li><a href="contact.html">Book a Lesson</a></li>
-                <li><a href="#">Event Calendar</a></li>
-                <li><a href="#">FAQ</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>CONTACT</h4>
-            <ul>
-                <li><a href="tel:3062273052">306.227.3052</a></li>
-                <li><a href="mailto:info@swsc.ca">info@swsc.ca</a></li>
-                <li>Saskatoon, SK</li>
-            </ul>
-        </div>
-        <div class="footer-bottom">
-            <span>© 2026 Saskatoon Water Ski Club. All rights reserved.</span>
-            <div class="social-links">
-                <a href="https://www.instagram.com/saskatoonwaterskiclub/" target="_blank">IG</a>
-                <a href="https://www.facebook.com/saskatoonwaterskiclub" target="_blank">FB</a>
-                <a href="http://x.com/SWSClub" target="_blank">X</a>
-            </div>
-        </div>
-    </footer>
+  <!-- CTA Section -->
+  <section class="cta">
+    <h2>READY TO JOIN?</h2>
+    <p>Become part of Saskatchewan's most welcoming water sports community.</p>
+    <a href="contact.html" class="btn-primary">Contact Us to Sign Up</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-brand">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Saskatoon Water Ski Club">
+      </a>
+      <p>Saskatoon Water Ski Club has been Saskatchewan's premier water sports destination since 1972.</p>
+    </div>
+    <div class="footer-col">
+      <h4>QUICK LINKS</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="about.html#coaches">Our Coaches</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>MEMBERSHIP</h4>
+      <ul>
+        <li><a href="membership.html">Join the Club</a></li>
+        <li><a href="contact.html">Book a Lesson</a></li>
+        <li><a href="#">Event Calendar</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>CONTACT</h4>
+      <ul>
+        <li><a href="tel:3062273052">306.227.3052</a></li>
+        <li><a href="mailto:info@swsc.ca">info@swsc.ca</a></li>
+        <li>Saskatoon, SK</li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Saskatoon Water Ski Club. All rights reserved.</span>
+      <div class="social-links">
+        <a href="https://www.instagram.com/saskatoonwaterskiclub/" target="_blank">IG</a>
+        <a href="https://www.facebook.com/saskatoonwaterskiclub" target="_blank">FB</a>
+        <a href="http://x.com/SWSClub" target="_blank">X</a>
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>
