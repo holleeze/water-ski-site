@@ -1,4 +1,4 @@
-import { boardMembers } from "./data.js";
+import { boardMembers } from "../data/data.js";
 
 const grid = document.getElementById("boardGrid");
 

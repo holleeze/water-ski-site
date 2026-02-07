@@ -1,4 +1,4 @@
-import { galleryImages } from "./data.js";
+import { galleryImages } from "../data/data.js";
 
 const galleryGrid = document.querySelector(".gallery-grid");
 

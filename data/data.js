@@ -211,3 +211,26 @@ export const galleryImages = [
   { filename: "07.jpg", alt: "SWSC summer fun 7" },
   { filename: "08.jpg", alt: "SWSC summer fun 8" },
 ];
+
+/** 
+ * @typedef {Object} Article
+ * @property {string} url // URL to the news article 
+ */
+
+/**
+ * articles data
+ * @type {Article[]}
+ */
+
+/* News outlets aren't providing proper dates so
+ * just add most recent articles to the top of the list.
+ */
+export const articles = [
+  { url: "https://globalnews.ca/news/10674188/saskatoon-water-ski-club-world-u17-championships-2024/" },
+  { url: "https://www.ctvnews.ca/saskatoon/article/saskatoon-blind-deaf-water-skier-ready-to-make-waves-at-world-championships/" },
+  { url: "https://www.cbc.ca/news/canada/saskatchewan/water-ski-event-saskatoon-1.3702329" },
+  { url: "https://www.cbc.ca/news/canada/saskatoon/world-junior-water-ski-championships-saskatoon-morning-july-27-1.4764629" },
+  { url: "https://globalnews.ca/video/4328198/saskatoon-boys-heading-to-spain-for-world-jr-water-ski-championship/" },
+  { url: "https://globalnews.ca/news/2825962/adrenaline-is-through-the-roof-world-champion-jumper-ryan-dodd-lands-in-saskatoon/" },
+  { url: "https://thestarphoenix.com/sports/local-sports/the-feeling-of-flying-is-unbelievable-water-ski-champ-gives-lessons-in-saskatoon" },
+]
