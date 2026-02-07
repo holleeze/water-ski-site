@@ -1,4 +1,4 @@
-import { coaches } from "./data.js";
+import { coaches } from "../data/data.js";
 
 const grid = document.getElementById("coachGrid");
 

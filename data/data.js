@@ -211,3 +211,16 @@ export const galleryImages = [
   { filename: "07.jpg", alt: "SWSC summer fun 7" },
   { filename: "08.jpg", alt: "SWSC summer fun 8" },
 ];
+
+/** 
+ * @typedef {Object} Article
+ * @property {string} url // URL to the news article 
+ */
+
+/**
+ * articles data
+ * @type {Article[]}
+ */
+export const articles = [
+  { url: "https://thestarphoenix.com/sports/local-sports/the-feeling-of-flying-is-unbelievable-water-ski-champ-gives-lessons-in-saskatoon" },
+]
