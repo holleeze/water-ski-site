@@ -4,6 +4,8 @@ import fetch from 'node-fetch';
 import * as cheerio from 'cheerio';
 import fs from 'fs';
 
+const PATH = './data/article_data.js';
+
 /**
  * Fetch metadata from a URL
  * @param {string} url 
@@ -74,8 +76,10 @@ async function fetchMetadata(url) {
  * Load existing article data to avoid re-fetching
  */
 function loadExistingData() {
+  console.log(`Trying to read from: ${PATH}`);
+  console.log(`Absolute path: ${fs.realpathSync('.') + '/' + PATH}`);
   try {
-    const data = fs.readFileSync('./article_data.js', 'utf8');
+    const data = fs.readFileSync(PATH, 'utf8');
     // Extract the array from the export statement
     const match = data.match(/export const articleData = (\[[\s\S]*\]);/);
     if (match) {
@@ -94,12 +98,17 @@ async function generateArticleData() {
   console.log('Starting metadata fetch...\n');
 
   const existingData = loadExistingData();
+  console.log(`Loaded ${existingData.length} existing articles`);
+  console.log('Existing URLs:', existingData.map(a => a.url));
+
   const existingUrls = new Set(existingData.map(a => a.url));
 
   const articleData = [...existingData];
 
   // Only fetch new URLs
   const newArticles = articles.filter(a => !existingUrls.has(a.url));
+  console.log(`Total articles in data.js: ${articles.length}`);
+  console.log(`New articles to fetch: ${newArticles.length}`);
 
   if (newArticles.length === 0) {
     console.log('No new articles to fetch!');
@@ -142,8 +151,14 @@ async function generateArticleData() {
 export const articleData = ${JSON.stringify(articleData, null, 2)};
 `;
 
-  fs.writeFileSync('../data/article_data.js', output);
+  // Create directory if it doesn't exist
+  const dir = PATH.substring(0, PATH.lastIndexOf('/'));
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+
+  fs.writeFileSync(PATH, output);
   console.log(`\n✓ Generated article_data.js with ${articleData.length} article(s)`);
 }
 
-generateArticleData()
+generateArticleData();
