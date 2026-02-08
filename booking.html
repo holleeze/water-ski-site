@@ -4,19 +4,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bookings | Saskatoon Water Ski Club</title>
-  <meta name="description" content="Saskatoon Water Ski Club - Bookings.">
-
+  <title>Book a Ski Set | Saskatoon Water Ski Club</title>
+  <meta name="description"
+    content="Book your ski set with Saskatoon Water Ski Club. Choose your preferred date and time.">
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap"
     rel="stylesheet">
-
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Cal.com specific styling */
+    .booking-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
+    #my-cal-inline-ski-set {
+      width: 100%;
+      min-height: 800px;
+      border-radius: 20px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .booking-info {
+      background: var(--cream-warm);
+      padding: 2rem;
+      border-radius: 20px;
+      margin-bottom: 3rem;
+      border-left: 5px solid var(--gold);
+    }
+
+    .booking-info h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      color: var(--teal-dark);
+      margin-bottom: 1rem;
+    }
+
+    .booking-info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .info-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--gold);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .info-content h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.25rem;
+      color: var(--teal-dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .info-content p {
+      color: rgba(10, 10, 10, 0.7);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .booking-info-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      #my-cal-inline-ski-set {
+        min-height: 700px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -35,17 +114,69 @@
       <li><a href="news.html">News</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <a href="contact.html" class="nav-cta">Book a Lesson</a>
+    <a href="booking.html" class="nav-cta">Book a Ski Set</a>
   </nav>
 
   <!-- Page Header -->
   <header class="page-header">
-    <h1>BOOKINGS</h1>
-    <p>Book a ski set with the Saskatoon Water Ski Club</p>
+    <h1>BOOK YOUR SKI SET</h1>
+    <p>Select your preferred date and time from the calendar below</p>
   </header>
 
-  <!-- Bookings content -->
-  <section class="content-section">
+  <!-- Booking Content -->
+  <section class="content-section booking-container">
+
+    <!-- Booking Info -->
+    <div class="booking-info">
+      <h2>Before You Book</h2>
+      <div class="booking-info-grid">
+        <div class="info-item">
+          <div class="info-icon">⏱️</div>
+          <div class="info-content">
+            <h3>Duration</h3>
+            <p>Each ski set is 10 minutes.</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">📍</div>
+          <div class="info-content">
+            <h3>Location</h3>
+            <p><a href="https://maps.app.goo.gl/74Gogi1j1YeKS4gd6">The "Rat Hole".</a>
+              Please arrive 10 minutes early.</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">🎿</div>
+          <div class="info-content">
+            <h3>Equipment</h3>
+            <p>All equipment provided if needed.</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">🔄</div>
+          <div class="info-content">
+            <h3>Cancellation</h3>
+            <p>Please cancel at least 24 hours in advance if your plans change.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cal.com Embed -->
+    <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-ski-set"></div>
+    <script type="text/javascript">
+      (function (C, A, L) {let p = function (a, ar) {a.q.push(ar);}; let d = C.document; C.Cal = C.Cal || function () {let cal = C.Cal; let ar = arguments; if (!cal.loaded) {cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true;} if (ar[0] === L) {const api = function () {p(api, arguments);}; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") {cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar);};})(window, "https://app.cal.com/embed/embed.js", "init");
+      Cal("init", "ski-set", {origin: "https://app.cal.com"});
+      Cal.ns["ski-set"]("inline", {
+        elementOrSelector: "#my-cal-inline-ski-set",
+        config: {"layout": "month_view", "useSlotsViewOnSmallScreen": "true", "theme": "light"},
+        calLink: "saskatoon-wsc/ski-set",
+      });
+      Cal.ns["ski-set"]("ui", {"theme": "light", "cssVarsPerTheme": {"light": {"cal-brand": "#146c94"}}, "hideEventTypeDetails": false, "layout": "month_view"});
+    </script>
 
   </section>
 
