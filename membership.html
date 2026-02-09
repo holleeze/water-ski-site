@@ -7,22 +7,19 @@
   <title>Membership | Saskatoon Water Ski Club</title>
   <meta name="description"
     content="Join the Saskatoon Water Ski Club - membership options for individuals, families, and competitive athletes.">
-
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap"
     rel="stylesheet">
-
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
-
   <style>
     /* Membership-specific styles */
     .pricing-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 2rem;
       margin-top: 3rem;
     }
@@ -42,25 +39,6 @@
       box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
     }
 
-    .pricing-card.featured {
-      border: 3px solid var(--gold);
-    }
-
-    .pricing-card.featured::before {
-      content: 'MOST POPULAR';
-      position: absolute;
-      top: -12px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--gold);
-      color: var(--black);
-      padding: 0.25rem 1rem;
-      border-radius: 50px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-    }
-
     .pricing-card h3 {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 1.75rem;
@@ -68,22 +46,76 @@
       margin-bottom: 0.5rem;
     }
 
-    .pricing-card .price {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 3.5rem;
-      color: var(--teal-bright);
-      line-height: 1;
-      margin: 1rem 0;
-    }
-
-    .pricing-card .price span {
-      font-size: 1rem;
-      color: rgba(10, 10, 10, 0.5);
-    }
-
     .pricing-card .description {
       color: rgba(10, 10, 10, 0.65);
       margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .pricing-options {
+      margin-bottom: 2rem;
+    }
+
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      position: relative;
+    }
+
+    .price-row:last-child {
+      border-bottom: none;
+    }
+
+    .price-row.best-value {
+      background: linear-gradient(90deg, rgba(211, 175, 55, 0.08) 0%, rgba(211, 175, 55, 0.15) 50%, rgba(211, 175, 55, 0.08) 100%);
+      padding: 0.75rem 1rem;
+      margin: 0 -1rem;
+      border-radius: 10px;
+    }
+
+    .price-row.best-value::after {
+      content: 'BEST VALUE';
+      position: absolute;
+      top: -8px;
+      right: 10px;
+      background: var(--gold);
+      color: var(--black);
+      padding: 0.15rem 0.5rem;
+      border-radius: 50px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .price-label {
+      font-weight: 600;
+      color: var(--teal-dark);
+      font-size: 0.9rem;
+      text-align: left;
+    }
+
+    .price-label .sunset-note {
+      display: block;
+      font-size: 0.75rem;
+      color: rgba(10, 10, 10, 0.5);
+      font-weight: 400;
+      margin-top: 0.15rem;
+    }
+
+    .price-value {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.75rem;
+      color: var(--teal-bright);
+      line-height: 1;
+    }
+
+    .price-value span {
+      font-size: 0.7rem;
+      color: rgba(10, 10, 10, 0.5);
+      font-family: 'DM Sans', sans-serif;
     }
 
     .pricing-card ul {
@@ -94,8 +126,8 @@
 
     .pricing-card li {
       padding: 0.5rem 0;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
       color: rgba(10, 10, 10, 0.75);
+      font-size: 0.9rem;
     }
 
     .pricing-card li::before {
@@ -154,60 +186,171 @@
     </ul>
     <a href="booking.html" class="nav-cta">Book a Ski Set</a>
   </nav>
-
   <!-- Page Header -->
   <header class="page-header">
     <h1>MEMBERSHIP</h1>
     <p>Join Saskatchewan's premier water ski community</p>
   </header>
-
   <!-- Pricing Section -->
   <section class="content-section">
     <h2>MEMBERSHIP OPTIONS</h2>
-    <p>Choose the membership that's right for you. All memberships include access to our facility during operating hours
-      and member rates on lessons.</p>
+    <p>Choose the membership that's right for you. All memberships include access to our facility and equipment during
+      operating hours. Sunset memberships provide access after 4pm only.</p>
 
     <div class="pricing-grid">
+
+
+      <!-- Student -->
       <div class="pricing-card">
-        <h3>INDIVIDUAL</h3>
-        <div class="price">$XXX <span>/season</span></div>
-        <p class="description">Perfect for solo skiers</p>
+        <h3>STUDENT</h3>
+        <p class="description">For students with valid ID</p>
+
+        <div class="pricing-options">
+          <div class="price-row">
+            <div class="price-label">
+              Monthly
+            </div>
+            <div class="price-value">$XXX <span>/mo</span></div>
+          </div>
+          <div class="price-row">
+            <div class="price-label">
+              Sunset Monthly
+              <span class="sunset-note">Access after 4pm</span>
+            </div>
+            <div class="price-value">$XXX <span>/mo</span></div>
+          </div>
+          <div class="price-row best-value">
+            <div class="price-label">
+              Season
+            </div>
+            <div class="price-value">$XXX <span>/season</span></div>
+          </div>
+          <div class="price-row">
+            <div class="price-label">
+              Sunset Season
+              <span class="sunset-note">Access after 4pm</span>
+            </div>
+            <div class="price-value">$XXX <span>/season</span></div>
+          </div>
+        </div>
+
         <ul>
-          <li>Full season access</li>
-          <li>Member lesson rates</li>
+          <li>Valid student ID required</li>
           <li>Equipment rentals</li>
+          <li>Member lesson rates</li>
           <li>Club events access</li>
         </ul>
-        <a href="contact.html" class="btn-primary" style="width: 100%;">Join Now</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5W-QjTQKq7PQ-TbQzuE0zXjH_NiDun2f4u1wIeEaxdcjN4w/viewform"
+          class="btn-primary" style="width: 100%;">Join Now</a>
       </div>
 
-      <div class="pricing-card featured">
-        <h3>FAMILY</h3>
-        <div class="price">$XXX <span>/season</span></div>
-        <p class="description">Best value for families</p>
+      <!-- Adult -->
+      <div class="pricing-card">
+        <h3>ADULT</h3>
+        <p class="description">Best value for individuals</p>
+
+        <div class="pricing-options">
+          <div class="price-row">
+            <div class="price-label">
+              Monthly
+            </div>
+            <div class="price-value">$XXX <span>/mo</span></div>
+          </div>
+          <div class="price-row">
+            <div class="price-label">
+              Sunset Monthly
+              <span class="sunset-note">Access after 4pm</span>
+            </div>
+            <div class="price-value">$XXX <span>/mo</span></div>
+          </div>
+          <div class="price-row best-value">
+            <div class="price-label">
+              Season
+            </div>
+            <div class="price-value">$XXX <span>/season</span></div>
+          </div>
+          <div class="price-row">
+            <div class="price-label">
+              Sunset Season
+              <span class="sunset-note">Access after 4pm</span>
+            </div>
+            <div class="price-value">$XXX <span>/season</span></div>
+          </div>
+        </div>
+
         <ul>
-          <li>Up to 4 family members</li>
-          <li>Full season access</li>
-          <li>Member lesson rates</li>
           <li>Equipment rentals</li>
+          <li>Member lesson rates</li>
           <li>Priority booking</li>
           <li>Club events access</li>
         </ul>
-        <a href="contact.html" class="btn-primary" style="width: 100%;">Join Now</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5W-QjTQKq7PQ-TbQzuE0zXjH_NiDun2f4u1wIeEaxdcjN4w/viewform"
+          class="btn-primary" style="width: 100%;">Join Now</a>
       </div>
 
+      <!-- Family -->
       <div class="pricing-card">
-        <h3>COMPETITIVE</h3>
-        <div class="price">$XXX <span>/season</span></div>
-        <p class="description">For serious athletes</p>
+        <h3>FAMILY</h3>
+        <p class="description">Best value for families</p>
+
+        <div class="pricing-options">
+          <div class="price-row">
+            <div class="price-label">
+              Monthly
+            </div>
+            <div class="price-value">$XXX <span>/mo</span></div>
+          </div>
+          <div class="price-row">
+            <div class="price-label">
+              Sunset Monthly
+              <span class="sunset-note">Access after 4pm</span>
+            </div>
+            <div class="price-value">$XXX <span>/mo</span></div>
+          </div>
+          <div class="price-row best-value">
+            <div class="price-label">
+              Season
+            </div>
+            <div class="price-value">$XXX <span>/season</span></div>
+          </div>
+          <div class="price-row">
+            <div class="price-label">
+              Sunset Season
+              <span class="sunset-note">Access after 4pm</span>
+            </div>
+            <div class="price-value">$XXX <span>/season</span></div>
+          </div>
+        </div>
+
         <ul>
-          <li>Everything in Individual</li>
-          <li>Team training sessions</li>
-          <li>Competition support</li>
-          <li>Video analysis</li>
-          <li>Priority coach access</li>
+          <li>Equipment rentals</li>
+          <li>Member lesson rates</li>
+          <li>Priority booking</li>
+          <li>Club events access</li>
         </ul>
-        <a href="contact.html" class="btn-primary" style="width: 100%;">Join Now</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5W-QjTQKq7PQ-TbQzuE0zXjH_NiDun2f4u1wIeEaxdcjN4w/viewform"
+          class="btn-primary" style="width: 100%;">Join Now</a>
+      </div>
+
+      <!-- Day Pass -->
+      <div class="pricing-card">
+        <h3>DAY PASS</h3>
+        <p class="description">Perfect for casual visitors</p>
+
+        <div class="pricing-options">
+          <div class="price-row">
+            <div class="price-label">Single Day</div>
+            <div class="price-value">$XXX</div>
+          </div>
+        </div>
+
+        <ul>
+          <li>One day of access</li>
+          <li>Equipment rentals available</li>
+          <li>Great for trying us out</li>
+        </ul>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5W-QjTQKq7PQ-TbQzuE0zXjH_NiDun2f4u1wIeEaxdcjN4w/viewform"
+          class="btn-primary" style="width: 100%;">Purchase</a>
       </div>
     </div>
   </section>
@@ -217,7 +360,6 @@
     <div style="max-width: 1200px; margin: 0 auto;">
       <h2>MEMBER BENEFITS</h2>
       <p>When you join SWSC, you become part of a community dedicated to the love of water sports.</p>
-
       <div class="benefits-list">
         <div class="benefit-item">
           <div class="benefit-icon">🚤</div>
@@ -268,10 +410,11 @@
   <!-- Season Info -->
   <section class="content-section">
     <h2>SEASON INFORMATION</h2>
-    <p>Our season typically runs from late May through early September, weather permitting. The South Saskatchewan River
-      provides excellent conditions for water skiing throughout the summer months.</p>
+    <p>Our season typically runs from late May through early September, weather permitting. Pike Lake provides excellent
+      conditions for water skiing throughout the summer months.</p>
     <p><strong>Operating Hours:</strong> Vary by day - contact us for current schedule.</p>
-    <p><strong>Location:</strong> South Saskatchewan River, Saskatoon area.</p>
+    <p><strong>Sunset Hours:</strong> 4:00 PM - Close (for Sunset memberships).</p>
+    <p><strong>Location:</strong> Pike Lake, Saskatchewan.</p>
     <p>Questions about membership? <a href="contact.html" style="color: var(--teal-bright);">Get in touch</a> and we'll
       be happy to help!</p>
   </section>
@@ -280,7 +423,8 @@
   <section class="cta">
     <h2>READY TO JOIN?</h2>
     <p>Become part of Saskatchewan's most welcoming water sports community.</p>
-    <a href="contact.html" class="btn-primary">Contact Us to Sign Up</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5W-QjTQKq7PQ-TbQzuE0zXjH_NiDun2f4u1wIeEaxdcjN4w/viewform"
+      class="btn-primary">Contact Us to Sign Up</a>
   </section>
 
   <!-- Footer -->
@@ -326,6 +470,7 @@
       </div>
     </div>
   </footer>
+
 </body>
 
 </html>
