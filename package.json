@@ -5,6 +5,8 @@
     "cheerio": "^1.2.0"
   },
   "scripts": {
-    "generate": "node ./scripts/generate_article_data.js"
+    "generate": "node ./scripts/generate_article_data.js",
+    "generate:gallery": "node ./scripts/generate_gallery_data.js",
+    "generate:all": "npm run generate && npm run generate:gallery"
   }
 }
