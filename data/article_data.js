@@ -1,6 +1,6 @@
 /**
  * Auto-generated article metadata
- * Generated: 2026-02-07T04:03:19.494Z
+ * Generated: 2026-02-09T21:13:06.920Z
  * DO NOT EDIT MANUALLY - Run generate_article_data.js instead
  */
 
@@ -30,17 +30,17 @@ export const articleData = [
     "author": "",
     "publishedDate": "",
     "siteName": "Global News",
-    "fetchedAt": "2026-02-07T04:02:36.320Z"
+    "fetchedAt": "2026-02-09T21:12:53.272Z"
   },
   {
     "url": "https://www.ctvnews.ca/saskatoon/article/saskatoon-blind-deaf-water-skier-ready-to-make-waves-at-world-championships/",
     "title": "Saskatoon blind, deaf water skier ready to make waves at world championships",
-    "description": "A Saskatoon water skier who is blind and deaf has partnered with a well-known artist to fundraise for the national adaptive water ski team.",
+    "description": "A Saskatoon water skier who is blind and deaf has partnered with a well-known artist to fundraise for the national adaptive water ski team.\n\n",
     "image": "https://www.ctvnews.ca/resizer/v2/TZUYLB4LX32G2PLIMBKXNFJMN4.jpg?smart=true&auth=ad53a3aa1621c8357e6e611637483ec076a4792461146e9442474876530a09c7&width=1200&height=630",
     "author": "",
     "publishedDate": "2024-05-17T01:00:00Z",
     "siteName": "CTVNews",
-    "fetchedAt": "2026-02-07T04:02:37.970Z"
+    "fetchedAt": "2026-02-09T21:12:57.590Z"
   },
   {
     "url": "https://www.cbc.ca/news/canada/saskatchewan/water-ski-event-saskatoon-1.3702329",
@@ -50,7 +50,7 @@ export const articleData = [
     "author": "",
     "publishedDate": "",
     "siteName": "CBC",
-    "fetchedAt": "2026-02-07T04:02:39.245Z"
+    "fetchedAt": "2026-02-09T21:12:59.000Z"
   },
   {
     "url": "https://www.cbc.ca/news/canada/saskatoon/world-junior-water-ski-championships-saskatoon-morning-july-27-1.4764629",
@@ -60,7 +60,7 @@ export const articleData = [
     "author": "",
     "publishedDate": "",
     "siteName": "CBC",
-    "fetchedAt": "2026-02-07T04:02:40.383Z"
+    "fetchedAt": "2026-02-09T21:13:00.194Z"
   },
   {
     "url": "https://globalnews.ca/video/4328198/saskatoon-boys-heading-to-spain-for-world-jr-water-ski-championship/",
@@ -70,7 +70,7 @@ export const articleData = [
     "author": "",
     "publishedDate": "",
     "siteName": "Global News",
-    "fetchedAt": "2026-02-07T04:02:42.604Z"
+    "fetchedAt": "2026-02-09T21:13:02.715Z"
   },
   {
     "url": "https://globalnews.ca/news/2825962/adrenaline-is-through-the-roof-world-champion-jumper-ryan-dodd-lands-in-saskatoon/",
@@ -80,7 +80,7 @@ export const articleData = [
     "author": "",
     "publishedDate": "",
     "siteName": "Global News",
-    "fetchedAt": "2026-02-07T04:02:44.071Z"
+    "fetchedAt": "2026-02-09T21:13:04.159Z"
   },
   {
     "url": "https://thestarphoenix.com/sports/local-sports/the-feeling-of-flying-is-unbelievable-water-ski-champ-gives-lessons-in-saskatoon",
@@ -90,6 +90,6 @@ export const articleData = [
     "author": "",
     "publishedDate": "",
     "siteName": "thestarphoenix",
-    "fetchedAt": "2026-02-07T02:16:49.215Z"
-  },
+    "fetchedAt": "2026-02-09T21:13:05.919Z"
+  }
 ];
