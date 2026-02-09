@@ -153,33 +153,27 @@ export const athletes = [
  */
 export const boardMembers = [
   {
-    name: "Jim Clunie",
+    name: "Norm Lucas",
     title: "President",
-    occupation: "President, Kelsey Trail & Trucking",
+    occupation: "Corporate Sponsership Marketing & Media Relations",
     image: "👤"
   },
   {
-    name: "Jeff Edwards",
-    title: "Past President",
-    occupation: "Construction Manager, Hamm Construction",
-    image: "👤"
-  },
-  {
-    name: "Norm Lucas ",
+    name: "Michelle Clunie",
     title: "VP Competition / Marketing & Media Relations",
-    occupation: "Playbook Project Management",
+    occupation: "",
     image: "👤"
   },
   {
-    name: "Greg Edwards",
+    name: "Michelle Clunie",
     title: "Treasurer",
     occupation: "",
     image: "👤"
   },
   {
-    name: "Dan Steen",
+    name: "Jim Clunie",
     title: "VP Site",
-    occupation: "Regional Manager, Mazergroup",
+    occupation: "",
     image: "👤"
   },
   {
