@@ -164,24 +164,6 @@ export const galleryImages = [
   { filename: "08.jpg", alt: "SWSC summer fun 8" },
 ];
 
-/*
- * @typedef {Object} membershipPricing
- * @property {string} title
- * @property {string}  
- * @property {string}
- * /
-
-
-/*
- * membershipPricing data
- * @type {MembershipPricing[]}
- */
-export const membershipPricing = [
-  {},
-];
-
-
-
 /** 
  * @typedef {Object} Article
  * @property {string} url // URL to the news article 
