@@ -88,6 +88,11 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <a href="booking.html" class="nav-cta">Book a Ski Set</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
   </nav>
 
   <!-- Page Header -->
@@ -176,6 +181,36 @@
       </div>
     </div>
   </footer>
+ <script>
+  const toggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  // Create overlay dynamically
+  const overlay = document.createElement('div');
+  overlay.classList.add('nav-overlay');
+  document.body.appendChild(overlay);
+
+  function closeMenu() {
+    toggle.classList.remove('open');
+    navLinks.classList.remove('open');
+    overlay.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+
+  toggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    toggle.classList.toggle('open');
+    overlay.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+
+  overlay.addEventListener('click', closeMenu);
+
+  // Close on nav link click (for same-page anchors)
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+</script> 
 </body>
 
 </html>

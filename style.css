@@ -962,9 +962,93 @@ footer {
     padding: 1rem 2rem;
   }
 
+   /* Remove the old `display: none` for nav-links and replace with: */
   .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: min(75vw, 320px);
+    height: 100vh;
+    background: var(--cream);
+    padding: 6rem 2rem 2rem;
+    box-shadow: -4px 0 30px rgba(0, 0, 0, 0.12);
+    transition: right 0.35s ease;
+    z-index: 999;
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-links li {
+    border-bottom: 1px solid rgba(20, 108, 148, 0.1);
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+  }
+
+  /* Hamburger button */
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 1001;
+  }
+
+  .nav-toggle span {
+    display: block;
+    height: 2px;
+    background: var(--teal-dark);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+
+  /* Animate to X when open */
+  .nav-toggle.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .nav-toggle.open span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  .nav-toggle.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* Dim overlay behind the drawer */
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 998;
+  }
+
+  .nav-overlay.open {
+    display: block;
+  }
+
+@media (min-width: 1025px) {
+  .nav-toggle {
     display: none;
   }
+}
 
   .hero {
     padding: 6rem 2rem 4rem;
