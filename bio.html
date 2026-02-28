@@ -187,21 +187,29 @@
 
     .bio-gallery-item {
       position: relative;
-    }
-
-    .bio-gallery-item img {
-      width: 100%;
-      height: auto;
+      aspect-ratio: 4/3;
+      overflow: hidden;
       border-radius: 15px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     }
 
+    .bio-gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     .bio-gallery-item .photo-credit {
-      text-align: right;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 0.5rem 1rem;
       font-size: 0.85rem;
-      color: rgba(10, 10, 10, 0.5);
-      margin-top: 0.5rem;
+      margin: 0;
       font-style: italic;
+      border-radius: 15px 0 15px 0;
     }
 
     @media (max-width: 768px) {

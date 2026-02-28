@@ -12,6 +12,18 @@
  */
 export const coaches = [
   {
+    name: "Ryan Dodd",
+    role: "Pro Coach",
+    bio: "Brief bio about this coach's background, experience, and specialties.",
+    image: "👤"
+  },
+  {
+    name: "Jaret Llewellyn",
+    role: "Pro Coach",
+    bio: "Brief bio about this coach's background, experience, and specialties.",
+    image: "👤"
+  },
+  {
     name: "Sam Edwards",
     role: "Driver/Coach",
     bio: "A first year student at SFU studying environmental technology. Sam has been employed with the organization since 2020. Sam his level 2 boat certification, is a level 1 judge, certified life guard and completed the Foundations coaching level which has given him the skills and coaching techniques to help develop beginner and intermediate skiers.",
@@ -23,32 +35,36 @@ export const coaches = [
     bio: "An Engineering graduate from Clarkson University in Potsdam, New York, a semi- Pro Water Skier (3 events), NCCP certified coach, level 3 driver, member of the Canadian National Water Ski Team, Thomas brings a wealth of competitive experience to the ski club.  In the winter months, Thomas coaches Alpine Downhill and lives in Revelstoke, BC.",
     image: "👤"
   },
-  {
-    name: "Ryan Dodd",
-    role: "Pro Coach",
-    bio: "Brief bio about this coach's background, experience, and specialties.",
-    image: "👤"
-  },
-  {
-    name: "Jaret Llewellyn",
-    role: "Pro Coach",
-    bio: "Brief bio about this coach's background, experience, and specialties.",
-    image: "👤"
-  }
 ];
 
 /**
+ * @typedef {Object} AthleteDetails
+ * @property {string} [dateOfBirth] - Date of birth (e.g., "September 2nd, 2002")
+ * @property {string} [division] - Competition division (e.g., "Elite Men", "MU17")
+ * @property {string} [instagram] - Instagram handle (e.g., "@carterlucs")
+ * @property {string} [photoCredit] - Photo credit (e.g., "@Crowderphoto")
+ * @property {string} [wwsBio] - World Water Skiers bio link
+ */
+
+/**
+ * @typedef {Object} GalleryImage
+ * @property {string} src - Image source path
+ * @property {string} [credit] - Photo credit
+ */
+
+/**
  * @typedef {Object} Athlete
- * @property {string} name
- * @property {string} bioLink
- * @property {string} image
+ * @property {string} name - Athlete's full name
+ * @property {string} image - Profile image path or emoji
+ * @property {AthleteDetails} [details] - Athlete details (name, DOB, division, etc.)
+ * @property {string} bioHTML - HTML content for the bio page
+ * @property {GalleryImage[]} [galleryImages] - Optional array of action photos
  */
 
 /**
  * Athletes data
  * @type {Athlete[]}
- */
-export const athletes = [
+ */export const athletes = [
   {
     name: "Carter Lucas",
     image: "./images/athletes/clucas/clucas-pfp.jpg",
