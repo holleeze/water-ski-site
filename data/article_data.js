@@ -1,6 +1,6 @@
 /**
  * Auto-generated article metadata
- * Generated: 2026-02-09T21:13:06.920Z
+ * Generated: 2026-02-28T20:19:56.200Z
  * DO NOT EDIT MANUALLY - Run generate_article_data.js instead
  */
 

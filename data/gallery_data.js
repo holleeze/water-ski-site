@@ -1,6 +1,6 @@
 /**
  * Auto-generated gallery data
- * Generated: 2026-02-09T21:30:13.179Z
+ * Generated: 2026-02-28T20:19:56.439Z
  * DO NOT EDIT MANUALLY - Run generate_gallery_data.js instead
  */
 
@@ -36,47 +36,47 @@ export const galleryImages = [
     "alt": "Saskatoon Water Ski Club - Photo 5"
   },
   {
-    "filename": "Garage 2-2.jpg",
+    "filename": "DSC_3178.jpg",
     "alt": "Saskatoon Water Ski Club - Photo 6"
   },
   {
-    "filename": "Garage 2.jpg",
+    "filename": "Garage 2-2.jpg",
     "alt": "Saskatoon Water Ski Club - Photo 7"
   },
   {
-    "filename": "IMG_0070.jpg",
+    "filename": "Garage 2.jpg",
     "alt": "Saskatoon Water Ski Club - Photo 8"
   },
   {
-    "filename": "IMG_3684.JPG",
+    "filename": "IMG_0070.jpg",
     "alt": "Saskatoon Water Ski Club - Photo 9"
   },
   {
-    "filename": "IMG_3691.JPG",
+    "filename": "IMG_3684.JPG",
     "alt": "Saskatoon Water Ski Club - Photo 10"
   },
   {
-    "filename": "IMG_7808.png",
+    "filename": "IMG_3691.JPG",
     "alt": "Saskatoon Water Ski Club - Photo 11"
   },
   {
-    "filename": "Nationals5_JH46106.jpg",
+    "filename": "IMG_7808.png",
     "alt": "Saskatoon Water Ski Club - Photo 12"
   },
   {
-    "filename": "Slalom.jpg",
+    "filename": "Nationals5_JH46106.jpg",
     "alt": "Saskatoon Water Ski Club - Photo 13"
   },
   {
-    "filename": "VS3B088.jpg",
+    "filename": "Slalom.jpg",
     "alt": "Saskatoon Water Ski Club - Photo 14"
   },
   {
-    "filename": "Wade Cox.jpeg",
+    "filename": "VS3B088.jpg",
     "alt": "Saskatoon Water Ski Club - Photo 15"
   },
   {
-    "filename": "_DSC_3178.jpg",
+    "filename": "Wade Cox.jpeg",
     "alt": "Saskatoon Water Ski Club - Photo 16"
   },
   {

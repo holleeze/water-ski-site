@@ -51,8 +51,14 @@ export const coaches = [
 export const athletes = [
   {
     name: "Carter Lucas",
-    bioLink: "link",
-    image: "👤",
+    image: "images/athletes/carter-lucas.jpg",
+    details: {
+      dateOfBirth: "September 2nd, 2002",
+      division: "Elite Men",
+      instagram: "@carterlucs",
+      photoCredit: "@Crowderphoto"
+    },
+    bioHTML: `...`
   },
   {
     name: "Enzo Kristian",
@@ -135,28 +141,6 @@ export const boardMembers = [
     image: "👤"
   },
 ]
-
-/**
- * @typedef {Object} GalleryImage
- * @property {string} filename  // file name or URL of the image
- * @property {string} alt       // alt text for accessibility
- */
-
-/**
- * Photo gallery data
- * @type {GalleryImage[]}
- */
-export const galleryImages = [
-  { filename: "00.jpg", alt: "SWSC summer fun 0" },
-  { filename: "01.jpg", alt: "SWSC summer fun 1" },
-  { filename: "02.jpg", alt: "SWSC summer fun 2" },
-  { filename: "03.jpg", alt: "SWSC summer fun 3" },
-  { filename: "04.jpg", alt: "SWSC summer fun 4" },
-  { filename: "05.jpg", alt: "SWSC summer fun 5" },
-  { filename: "06.jpg", alt: "SWSC summer fun 6" },
-  { filename: "07.jpg", alt: "SWSC summer fun 7" },
-  { filename: "08.jpg", alt: "SWSC summer fun 8" },
-];
 
 /** 
  * @typedef {Object} Article

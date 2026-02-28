@@ -17,8 +17,8 @@ const personType = urlParams.get('type') || 'coach'; // coach, athlete, or board
 // Find the person in the appropriate array
 function findPerson(id, type) {
   let people, typeLabel, backLink;
-  
-  switch(type) {
+
+  switch (type) {
     case 'athlete':
       people = athletes;
       typeLabel = 'Athlete';
@@ -35,41 +35,41 @@ function findPerson(id, type) {
       typeLabel = 'Coach';
       backLink = 'about.html#coaches';
   }
-  
+
   const person = people.find(p => toSlug(p.name) === id);
-  
+
   return { person, typeLabel, backLink };
 }
 
 // Render the bio page
 function renderBio() {
   const container = document.getElementById('bioContainer');
-  
+
   if (!personId) {
     renderNotFound(container, 'No person specified');
     return;
   }
-  
+
   const { person, typeLabel, backLink } = findPerson(personId, personType);
-  
+
   if (!person) {
     renderNotFound(container, 'Person not found');
     return;
   }
-  
+
   // Update page title
   document.title = `${person.name} | Saskatoon Water Ski Club`;
-  
+
   // Determine role/title based on person type
   const roleText = person.role || person.title || '';
   const bioText = person.bio || 'Bio coming soon.';
-  
+
   // Check if image is emoji or URL
   const isEmoji = person.image && person.image.length <= 4;
-  const imageContent = isEmoji 
-    ? person.image 
+  const imageContent = isEmoji
+    ? person.image
     : `<img src="${person.image}" alt="${person.name}">`;
-  
+
   container.innerHTML = `
     <a href="${backLink}" class="bio-back-link">
       ← Back to ${typeLabel}s
