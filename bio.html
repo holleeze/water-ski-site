@@ -10,7 +10,9 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap"
+    rel="stylesheet">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
@@ -170,6 +172,41 @@
 
       .bio-info h1 {
         font-size: 2.5rem;
+      }
+    }
+
+    /* Gallery at bottom of bio */
+    .bio-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+      padding-top: 3rem;
+      border-top: 2px solid rgba(20, 108, 148, 0.1);
+    }
+
+    .bio-gallery-item {
+      position: relative;
+    }
+
+    .bio-gallery-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .bio-gallery-item .photo-credit {
+      text-align: right;
+      font-size: 0.85rem;
+      color: rgba(10, 10, 10, 0.5);
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+
+    @media (max-width: 768px) {
+      .bio-gallery {
+        grid-template-columns: 1fr;
       }
     }
   </style>
