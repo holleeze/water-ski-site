@@ -14,26 +14,136 @@ export const coaches = [
   {
     name: "Ryan Dodd",
     role: "Pro Coach",
-    bio: "Brief bio about this coach's background, experience, and specialties.",
-    image: "👤"
+    image: "./images/coaches/rdodd/rd-pfp.jpg",
+    details: {
+      hometown: "Olds, Alberta Canada",
+      residence: "Palm Bay, Florida",
+      sponsors: "Nautique Boats, SeaDek Marine Products, Eagle Wetsuits, Shuswap Ski and Board, Bolle Sunglasses, Garden Of Life, Kicker",
+      worldRanking: "#1 in the World",
+      currentTitle: "Current World Champion",
+      awards: "2015 Waterski Magazine Jumper of the Year Award"
+    },
+    bioHTML: `
+      <h3>About Ryan</h3>
+      <p><strong>Hobbies:</strong> Surfing, Mountain Biking, Coaching, Travel, Public/Motivational Speaking<br>
+      <strong>Personal Focus:</strong> To find my potential as an athlete<br>
+      <strong>Personal Best:</strong> Flight: Day 242 Feet, Night 229 feet<br>
+      <strong>Goals:</strong> Undefeated Season, Inspire as many athletes as possible, World Record of 255 Ft, Skifly 320 ft.</p>
+      
+      <h3>Major Titles</h3>
+      <p>(CURRENT World Champion, and World Cup Champion)</p>
+      <ul>
+        <li>2000: Junior World Jump Champion</li>
+        <li>2000-2002: 3 Time Junior Rolex Masters Jump Champion, 2 Time Junior Rolex Masters Trick and Overall Champion</li>
+        <li>2005-2007: 3 Time NCWSA Collegiate National Jump Champion, 2 Time Collegiate National Trick Champion. Led Team as Captain to National title 2 of 5 years.</li>
+        <li>2007: Moomba Masters Night Jump Champion, Silver Medal at Pan American Games</li>
+        <li>2008: MasterCraft Pro Tour Champion, London Night Jump Champion, Canadian National Champion</li>
+        <li>2009: Dubna World Cup Champion, Canadian National Champion, Pan American Champion</li>
+        <li>2010: Malibu Open Champion, Ukraine Open Champion</li>
+        <li>2011: Moomba Masters Champion, Moomba Masters Night Jump Champion, Perth Night Jump Champion, King of Darkness Champion. World Ski Fly Tour Title Belt Holder</li>
+        <li>2012: US Masters Jump Champion, Moscow Jump Champion, Calgary Pro Shootout Champion, Soaked Orlando Champion, Canadian National Open Champion</li>
+        <li>2013: Australian Open Champion</li>
+        <li>2013: Calgary Pro Shootout Champion</li>
+        <li>2013: LA Night Jam Champion</li>
+        <li>2013: Orlando Extreme Watersports Festival Champion</li>
+        <li>2013: Canadian National Champion</li>
+        <li>2013: Colombia Night Jump Champion</li>
+        <li>2014: Pan American Jump Champion</li>
+        <li>2014: Masters Jump Champion</li>
+        <li>2014: Malibu Open Jump Champion</li>
+        <li>2014: Rocketman Night Jump Champion</li>
+        <li>2014: Chile Night Jump Champion</li>
+        <li>2015: World Cup Mandurah Jump Champion</li>
+        <li>2015: US Masters Jump Champion</li>
+        <li>2015: Pan American Games Gold</li>
+        <li>2015: Canadian Open Champion</li>
+        <li>2015: Moscow Pro Champion</li>
+        <li>2015: London Night Jump Champion</li>
+        <li>2015: Rocketman Night Jump Champion</li>
+        <li>2015: Chile Night Jump Champion</li>
+        <li>2015: World Champion</li>
+    </ul>
+      
+      <h3>Awards & Records</h3>
+      <ul>
+        <li>28 Career Pro Wins</li>
+        <li>Canadian National Jump Record 242 ft</li>
+        <li>6 Time Canadian Athlete of the year for Waterski Canada</li>
+        <li>2011, 2012, 2013, 2014 Athletes Can Team Investors Group Bursary Recipient</li>
+        <li>8 Time Alberta Sport Parks and Recreation Athlete Support Grant Recipient</li>
+        <li>Broke Collegiate National Jump Record 201 ft</li>
+        <li>World Record for Longest Jump for an 18 year old at 229 ft.</li>
+        <li>Motivational Speaker for Motivate Canada on the Esteem Team</li>
+        <li>London Night Jump Record</li>
+        <li>Moomba Night Jump Record</li>
+        <li>3 time Collegiate Nationals Jump Champion</li>
+        <li>Waterski Magazine 2015 Male Jumper of the year</li>
+      </ul>
+      
+      <h3>Education / Experience</h3>
+      <ul>
+        <li>Bachelor of Business Administration - Management and Marketing</li>
+        <li>National Team member since 2001</li>
+        <li>Straight Line Sports Product Development and Marketing Consultant</li>
+        <li>Past Coach of the Canadian Junior team, Alberta and Saskatchewan Junior Development Programs</li>
+        <li>VP Stillwater Lakes 2011-Current</li>
+      </ul>
+    `
   },
   {
     name: "Jaret Llewellyn",
     role: "Pro Coach",
-    bio: "Brief bio about this coach's background, experience, and specialties.",
-    image: "👤"
+    image: "./images/coaches/jllewellyn/jl-pfp.jpg",
+    details: {
+      hometown: "Innisfail, Alberta, Canada",
+      residence: "Since 1996 I have lived and trained in West Palm Beach Florida",
+      sponsors: "MasterLine/HO by Camaro Wet Suits, LlewellynPro Goodman Skis, Masterline ropes, Wiley's Bindings, Llewellyn Pro signature series",
+      bestPerformances: "Ski Fly: Record 299 feet, Jump Record 240 feet, Slalom 3 @ 39½ off, Trick 11,210 points"
+    },
+    bioHTML: `
+      <h3>About Jaret</h3>
+      <p><strong>Wife:</strong> Brita<br>
+      <strong>Son:</strong> Dorien</p>
+      
+      <p>Full time water-skier on professional circuit 10 months a year; travel to trade shows and R&D testing for main sponsors year round; Offer ski clinics, corporate outings, inspirational talks to schools and businesses; Produces instructional, event and extreme water-ski DVDs</p>
+      
+      <h3>Career Highlights</h3>
+      <ul>
+        <li>Most Decorated Skier Of All Time!</li>
+        <li>117 Professional Wins</li>
+        <li>11 World Records</li>
+        <li>9 World Individual Titles</li>
+        <li>22 World Medals</li>
+        <li>16 World Titles</li>
+        <li>9 Times US Masters Champion</li>
+        <li>10 Times US Open Champion</li>
+        <li>24 Times Moomba Masters Champion</li>
+        <li>22 Time Pan American Championship</li>
+        <li>8 Gold, 4 Silvers Pan American Games</li>
+        <li>Flag bearer at 2003 Pan American Games</li>
+        <li>7 time World Team Member: 87, 88, 91, 93, 99, 09, 15</li>
+        <li>22 Gold Pan Am championships, 1 Silver & 4 Bronze = 26 Medals total</li>
+        <li>2 Time Guinness book world record Holder</li>
+        <li>Jaret has flown almost an entire football field 299Ft Ski Fly World Record</li>
+      </ul>
+      
+      <h3>Hobbies</h3>
+      <p>Ice hockey - play in West Palm Beach off season -team Budweiser (goalie or out!)</p>
+      <p>Snow skiing and snow boarding -try to get a few weeks each year. Coached house & travel ice hockey. Love teaching my son everything I know about all sports.</p>
+    `
   },
   {
     name: "Sam Edwards",
     role: "Driver/Coach",
-    bio: "A first year student at SFU studying environmental technology. Sam has been employed with the organization since 2020. Sam his level 2 boat certification, is a level 1 judge, certified life guard and completed the Foundations coaching level which has given him the skills and coaching techniques to help develop beginner and intermediate skiers.",
-    image: "👤" // later this can be an image URL
+    bio: "A first year student at SFU studying environmental technology, Sam has been employed with the organization since 2020. Sam his level 2 boat certification, is a level 1 judge, certified life guard and completed the Foundations coaching level which has given him the skills and coaching techniques to help develop beginner and intermediate skiers.",
+    image: "./images/coaches/sedwards/se-pfp.jpg"
+
   },
   {
     name: "Thomas Daigle ",
     role: "Driver/Coach",
     bio: "An Engineering graduate from Clarkson University in Potsdam, New York, a semi- Pro Water Skier (3 events), NCCP certified coach, level 3 driver, member of the Canadian National Water Ski Team, Thomas brings a wealth of competitive experience to the ski club.  In the winter months, Thomas coaches Alpine Downhill and lives in Revelstoke, BC.",
-    image: "👤"
+    image: "./images/coaches/tdaigle/td-pfp.jpg"
   },
 ];
 

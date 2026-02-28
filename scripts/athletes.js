@@ -21,12 +21,12 @@ athletes.forEach(athlete => {
 
   // Check if image is emoji or URL
   const isEmoji = athlete.image && athlete.image.length <= 4;
-  const imageContent = isEmoji 
-    ? athlete.image 
+  const imageContent = isEmoji
+    ? athlete.image
     : `<img src="${athlete.image}" alt="${athlete.name}">`;
 
   // Athletes may not have bio/role yet, handle gracefully
-  const bioPreview = athlete.bio 
+  const bioPreview = athlete.bio
     ? `<p>${athlete.bio.substring(0, 100)}${athlete.bio.length > 100 ? '...' : ''}</p>`
     : '';
 

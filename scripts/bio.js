@@ -120,6 +120,22 @@ function renderBio() {
     `;
   }
 
+  // Build coach details section (for pro coaches only - checks role)
+  if (personType === 'coach' && person.details && person.role === 'Pro Coach') {
+    const d = person.details;
+
+    detailsHTML = `
+      <div class="athlete-details">
+        ${d.hometown ? `<p><strong>Hometown:</strong> ${d.hometown}</p>` : ''}
+        ${d.residence ? `<p><strong>Reside:</strong> ${d.residence}</p>` : ''}
+        ${d.sponsors ? `<p><strong>Major Sponsors:</strong> ${d.sponsors}</p>` : ''}
+        ${d.bestPerformances ? `<p><strong>Best Performances:</strong> ${d.bestPerformances}</p>` : ''}
+        ${d.worldRanking ? `<p><strong>World Ranking:</strong> ${d.worldRanking}</p>` : ''}
+        ${d.currentTitle ? `<p><strong>Current Title:</strong> ${d.currentTitle}</p>` : ''}
+        ${d.awards ? `<p><strong>Awards:</strong> ${d.awards}</p>` : ''}
+      </div>
+    `;
+  }
   // Get bio content - use bioHTML if available, fallback to bio
   const bioContent = person.bioHTML || (person.bio ? `<p>${person.bio}</p>` : '<p>Bio coming soon.</p>');
 
