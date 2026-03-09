@@ -603,3 +603,48 @@ export const articles = [
   { url: "https://globalnews.ca/news/2825962/adrenaline-is-through-the-roof-world-champion-jumper-ryan-dodd-lands-in-saskatoon/" },
   { url: "https://thestarphoenix.com/sports/local-sports/the-feeling-of-flying-is-unbelievable-water-ski-champ-gives-lessons-in-saskatoon" },
 ]
+
+/**
+ * @typedef {Object} Sponsor
+ * @property {string} name - Sponsor name
+ * @property {string} logoImg - Path to sponsor logo image
+ * @property {string} url - Sponsor website URL
+ */
+
+/**
+ * Sponsors data
+ * @type {Sponsor[]}
+ */
+export const sponsors = [
+  {
+    name: "Water Ski Canada",
+    logoImg: "images/sponsors/wsc.png",
+    url: "https://waterskicanada.ca/"
+  },
+  {
+    name: "Nautique",
+    logoImg: "images/sponsors/nautique.png",
+    url: "https://nautique.com/"
+  },
+  {
+    name: "City of Saskatoon",
+    logoImg: "images/sponsors/saskatoon.png",
+    url: "https://www.saskatoon.ca/"
+  },
+  {
+    name: "1989 Jeux Canada Games Foundation Inc.",
+    logoImg: "images/sponsors/jeuxGames.png",
+    url: "https://www.sasksport.ca/funding-opportunities/other-funding-sources/1989-jeux-canada-games-foundation-inc/"
+  },
+  {
+    name: "SKI-IT-AGAIN",
+    logoImg: "images/sponsors/SIA.png",
+    url: "https://www.ski-it-again.com/"
+  },
+  {
+    name: "SkiFly",
+    logoImg: "images/sponsors/skifly.png",
+    url: "https://skifly.com/"
+  },
+];
+

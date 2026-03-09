@@ -388,6 +388,81 @@ nav {
   text-transform: uppercase;
 }
 
+/* ---------- Sponsors Section ---------- */
+.sponsors {
+  background: white;
+  padding: 6rem 4rem;
+  position: relative;
+}
+
+.sponsors-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sponsors-header h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  color: var(--teal-dark);
+  margin-bottom: 1rem;
+}
+
+.sponsors-header p {
+  color: rgba(10, 10, 10, 0.6);
+  font-size: 1.1rem;
+}
+
+.sponsors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Centers and spaces evenly */
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.sponsor-item {
+  flex: 0 0 calc(25% - 3rem);
+  /* 4 per row, accounting for gap */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+  filter: grayscale(100%) opacity(0.6);
+}
+
+.sponsor-item:hover {
+  transform: scale(1.05);
+  filter: grayscale(0%) opacity(1);
+}
+
+.sponsor-item img {
+  max-width: 100%;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .sponsors {
+    padding: 4rem 2rem;
+  }
+
+  .sponsors-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+  }
+
+  .sponsor-item img {
+    max-height: 60px;
+  }
+}
+
+
 /* ---------- About Section ---------- */
 .about {
   padding: 8rem 4rem;
