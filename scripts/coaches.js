@@ -21,8 +21,8 @@ coaches.forEach(coach => {
 
   // Check if image is emoji or URL
   const isEmoji = coach.image && coach.image.length <= 4;
-  const imageContent = isEmoji 
-    ? coach.image 
+  const imageContent = isEmoji
+    ? coach.image
     : `<img src="${coach.image}" alt="${coach.name}">`;
 
   card.innerHTML = `
@@ -30,7 +30,6 @@ coaches.forEach(coach => {
     <div class="team-card-content">
       <h3>${coach.name}</h3>
       <p class="role">${coach.role}</p>
-      <p>${coach.bio.substring(0, 100)}${coach.bio.length > 100 ? '...' : ''}</p>
     </div>
   `;
 

@@ -133,6 +133,39 @@ nav {
   box-shadow: 0 6px 20px rgba(211, 175, 55, 0.4);
 }
 
+/* ---------- Hamburger Menu ---------- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 2px;
+  background: var(--teal-dark);
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
 /* ---------- Buttons ---------- */
 .btn-primary {
   display: inline-block;
@@ -387,6 +420,81 @@ nav {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+
+/* ---------- Sponsors Section ---------- */
+.sponsors {
+  background: white;
+  padding: 6rem 4rem;
+  position: relative;
+}
+
+.sponsors-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sponsors-header h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  color: var(--teal-dark);
+  margin-bottom: 1rem;
+}
+
+.sponsors-header p {
+  color: rgba(10, 10, 10, 0.6);
+  font-size: 1.1rem;
+}
+
+.sponsors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Centers and spaces evenly */
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.sponsor-item {
+  flex: 0 0 calc(25% - 3rem);
+  /* 4 per row, accounting for gap */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+  filter: grayscale(100%) opacity(0.6);
+}
+
+.sponsor-item:hover {
+  transform: scale(1.05);
+  filter: grayscale(0%) opacity(1);
+}
+
+.sponsor-item img {
+  max-width: 100%;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .sponsors {
+    padding: 4rem 2rem;
+  }
+
+  .sponsors-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+  }
+
+  .sponsor-item img {
+    max-height: 60px;
+  }
+}
+
 
 /* ---------- About Section ---------- */
 .about {
@@ -868,6 +976,153 @@ nav {
   resize: vertical;
 }
 
+/* ---------- Mailchimp Newsletter Styling ---------- */
+.newsletter-section {
+  background: var(--teal-dark);
+  padding: 6rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.newsletter-section::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: var(--teal-bright);
+  opacity: 0.1;
+  border-radius: 50%;
+}
+
+.newsletter-content {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.newsletter-content h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  color: var(--cream);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.newsletter-content>p:first-of-type {
+  font-size: 1.1rem;
+  color: rgba(246, 241, 241, 0.7);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+#mc_embed_shell {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+#mc_embed_signup form {
+  display: flex;
+  flex-direction: column;
+}
+
+#mc_embed_signup .mc-field-group {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  /* Added spacing between fields */
+}
+
+#mc_embed_signup input[type="email"],
+#mc_embed_signup input[type="text"] {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid rgba(20, 108, 148, 0.2);
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+  background: white;
+  color: var(--black);
+  transition: border-color 0.3s ease;
+}
+
+#mc_embed_signup input[type="email"]::placeholder,
+#mc_embed_signup input[type="text"]::placeholder {
+  color: rgba(10, 10, 10, 0.4);
+}
+
+#mc_embed_signup input[type="email"]:focus,
+#mc_embed_signup input[type="text"]:focus {
+  outline: none;
+  border-color: var(--teal-bright);
+}
+
+#mc_embed_signup .optionalParent {
+  margin-top: 0.5rem;
+  /* Space before button */
+}
+
+#mc_embed_signup input[type="submit"] {
+  width: 100%;
+  background: var(--gold);
+  color: var(--black);
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(211, 175, 55, 0.4);
+}
+
+#mc_embed_signup input[type="submit"]:hover {
+  background: var(--yellow);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(211, 175, 55, 0.5);
+}
+
+#mc_embed_signup #mce-responses {
+  margin-top: 1rem;
+}
+
+#mc_embed_signup .response {
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+}
+
+#mc_embed_signup #mce-error-response {
+  background-color: #ffe6e6;
+  color: #c41e3a;
+}
+
+#mc_embed_signup #mce-success-response {
+  background-color: #e6f7e6;
+  color: #2d7a2d;
+}
+
+.newsletter-content>p:last-child {
+  font-size: 0.85rem;
+  color: rgba(246, 241, 241, 0.7);
+  /* Changed to match paragraph above */
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .newsletter-section {
+    padding: 4rem 2rem;
+  }
+
+  #mc_embed_shell {
+    padding: 2rem;
+  }
+}
+
 /* ---------- Footer ---------- */
 footer {
   background: var(--black);
@@ -958,97 +1213,34 @@ footer {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1024px) {
-  nav {
-    padding: 1rem 2rem;
+  .hamburger {
+    display: flex;
   }
 
-   /* Remove the old `display: none` for nav-links and replace with: */
   .nav-links {
     display: flex;
     flex-direction: column;
-    gap: 0;
     position: fixed;
     top: 0;
     right: -100%;
-    width: min(75vw, 320px);
+    width: 280px;
     height: 100vh;
     background: var(--cream);
-    padding: 6rem 2rem 2rem;
-    box-shadow: -4px 0 30px rgba(0, 0, 0, 0.12);
-    transition: right 0.35s ease;
-    z-index: 999;
+    padding: 5rem 2rem 2rem;
+    gap: 0;
+    transition: right 0.3s ease;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
   }
 
   .nav-links.open {
     right: 0;
   }
 
-  .nav-links li {
-    border-bottom: 1px solid rgba(20, 108, 148, 0.1);
-  }
-
-  .nav-links a {
+  .nav-links li a {
     display: block;
-    padding: 1rem 0;
+    padding: 0.75rem 0;
     font-size: 1.1rem;
   }
-
-  /* Hamburger button */
-  .nav-toggle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    width: 40px;
-    height: 40px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 4px;
-    z-index: 1001;
-  }
-
-  .nav-toggle span {
-    display: block;
-    height: 2px;
-    background: var(--teal-dark);
-    border-radius: 2px;
-    transition: all 0.3s ease;
-    transform-origin: center;
-  }
-
-  /* Animate to X when open */
-  .nav-toggle.open span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-  }
-
-  .nav-toggle.open span:nth-child(2) {
-    opacity: 0;
-    transform: scaleX(0);
-  }
-
-  .nav-toggle.open span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-  }
-
-  /* Dim overlay behind the drawer */
-  .nav-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 998;
-  }
-
-  .nav-overlay.open {
-    display: block;
-  }
-
-@media (min-width: 1025px) {
-  .nav-toggle {
-    display: none;
-  }
-}
 
   .hero {
     padding: 6rem 2rem 4rem;
