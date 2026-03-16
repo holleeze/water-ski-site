@@ -483,48 +483,6 @@ export const coaches = [
   `
   },
   {
-    name: "Ethan Hamilton",
-    image: "./images/athletes/ehamilton/eh-pfp.jpg",
-    details: {
-      division: "U14 Boys"
-      // No dateOfBirth - age not displayed
-    },
-    bioHTML: `
-    <h3>Competition Results</h3>
-    <ul>
-      <li>2021 National champion U14 slalom & trick</li>
-      <li>2021 Western Canadian champion U14 slalom & trick, 3rd place jump</li>
-      <li>2019 Western Canadian U12 2nd place slalom & trick</li>
-      <li>2019 Provincial champion U12 slalom, trick, jump & overall</li>
-    </ul>
-    
-    <h3>Waterski Goals</h3>
-    <p>My goals for the 2022 year are to get through the 13m line for slalom, jump 30m, and to exceed 2500 points in trick. I would like to compete in Nationals and hopefully international competitions this year as well.</p>
-    
-    <h3>Training Sites</h3>
-    <ul>
-      <li>SWSC Club in Saskatoon (the 'Rat Hole')</li>
-      <li>Our family cottage at Marean Lake</li>
-      <li>Proline</li>
-    </ul>
-    
-    <h3>Coaches</h3>
-    <p>Adam Morris, Brett Walker, Carter Lucas</p>
-    
-    <h3>Personal Bests</h3>
-    <ul>
-      <li>Slalom: 2@/13m/55km/h</li>
-      <li>Trick: 1600 points</li>
-      <li>Jump: 24m</li>
-    </ul>
-    
-    <h3>Interests Outside of Waterskiing</h3>
-    <p>I play hockey a lot in the winter, this year I played with the Bantam AA Humboldt Broncos. A few of my buddies and I also workout twice a week with the trainer at the local gym. I also enjoy fishing, snowmobiling, spending time at the lake and playing with my dog.</p>
-    
-    <p>After breaking my leg on the hockey rink in April 2021, my waterski training had a bit of a delayed start. I worked hard to get back at it as quickly as I could, and I'm excited for a full season of training in 2022!</p>
-  `
-  },
-  {
     name: "Ashley Berg",
     bioLink: "link",
     image: "👤",
@@ -552,18 +510,12 @@ export const boardMembers = [
   {
     name: "Norm Lucas",
     title: "President",
-    occupation: "Corporate Sponsership Marketing & Media Relations",
+    occupation: "Corporate Sponsorship Marketing & Media Relations",
     image: "👤"
   },
   {
     name: "Michelle Clunie",
-    title: "VP Competition / Marketing & Media Relations",
-    occupation: "",
-    image: "👤"
-  },
-  {
-    name: "Michelle Clunie",
-    title: "Treasurer",
+    title: "VP Competition / Marketing & Media Relations / Treasurer",
     occupation: "",
     image: "👤"
   },
