@@ -133,21 +133,8 @@ export const coaches = [
     `
   },
   {
-    name: "Sam Edwards",
-    role: "Driver/Coach",
-    bio: "A first year student at SFU studying environmental technology, Sam has been employed with the organization since 2020. Sam his level 2 boat certification, is a level 1 judge, certified life guard and completed the Foundations coaching level which has given him the skills and coaching techniques to help develop beginner and intermediate skiers.",
-    image: "./images/coaches/sedwards/se-pfp.jpg"
-
-  },
-  {
-    name: "Thomas Daigle ",
-    role: "Driver/Coach",
-    bio: "An Engineering graduate from Clarkson University in Potsdam, New York, a semi- Pro Water Skier (3 events), NCCP certified coach, level 3 driver, member of the Canadian National Water Ski Team, Thomas brings a wealth of competitive experience to the ski club.  In the winter months, Thomas coaches Alpine Downhill and lives in Revelstoke, BC.",
-    image: "./images/coaches/tdaigle/td-pfp.jpg"
-  },
-  {
     name: "Carter Lucas",
-    role: "NCCP Level 3 Coach / Driver",
+    role: "NCCP Level 3 Coach / Driver / SK Team Athlete / Elite National Team Athlete",
     image: "./images/athletes/clucas/clucas-pfp.jpg",
     details: {
       dateOfBirth: "September 2nd, 2002",
@@ -209,39 +196,53 @@ export const coaches = [
       }
     ]
   },
-
+  {
+    name: "Jack Critchley",
+    role: "Pro Coach",
+    image: "👤",
+    details: {
+      hometown: "",
+      residence: "",
+      sponsors: "",
+      bestPerformances: ""
+    },
+    bioHTML: `
+      <h3>About Jackt</h3>
+      
+      <p>Bio coming soon!</p>
+      
+      <h3>Career Highlights</h3>
+      <ul>
+      </ul>
+      
+      <h3>Hobbies</h3>
+    `
+  },
 ];
 
+
 /**
- * @typedef {Object} AthleteDetails
- * @property {string} [dateOfBirth] - Date of birth (e.g., "September 2nd, 2002")
- * @property {string} [division] - Competition division (e.g., "Elite Men", "MU17")
- * @property {string} [instagram] - Instagram handle (e.g., "@carterlucs")
- * @property {string} [photoCredit] - Photo credit (e.g., "@Crowderphoto")
- * @property {string} [wwsBio] - World Water Skiers bio link
+ * @typedef {Object} Driver
+ * @property {string} name
+ * @property {string} [role] - Optional role description
+ * @property {string} [bio] - Optional short bio
+ * @property {string} image - Image path or emoji
  */
 
 /**
- * @typedef {Object} GalleryImage
- * @property {string} src - Image source path
- * @property {string} [credit] - Photo credit
+ * Drivers data
+ * @type {Driver[]}
  */
-
-/**
- * @typedef {Object} Athlete
- * @property {string} name - Athlete's full name
- * @property {string} image - Profile image path or emoji
- * @property {AthleteDetails} [details] - Athlete details (name, DOB, division, etc.)
- * @property {string} bioHTML - HTML content for the bio page
- * @property {GalleryImage[]} [galleryImages] - Optional array of action photos
- */
-
-/**
- * Athletes data
- * @type {Athlete[]}
- */export const athletes = [
+export const drivers = [
+  {
+    name: "Thomas Daigle",
+    role: "Tournament Driver/Coach",
+    bio: "An Engineering graduate from Clarkson University in Potsdam, New York, a semi- Pro Water Skier (3 events), NCCP certified coach, level 3 driver, member of the Canadian National Water Ski Team, Thomas brings a wealth of competitive experience to the ski club.  In the winter months, Thomas coaches Alpine Downhill and lives in Revelstoke, BC.",
+    image: "./images/coaches/tdaigle/td-pfp.jpg"
+  },
   {
     name: "Enzo Kristian",
+    role: "NCCP Level 1 Trained Coach / Driver / SK Team Athlete / U21 National Team Athlete",
     image: "./images/athletes/ekristian/ek-pfp.jpg",
     details: {
       dateOfBirth: "September 30th, 2008",
@@ -334,6 +335,7 @@ export const coaches = [
   },
   {
     name: "Samson Clunie",
+    role: "NCCP Level 1 Trained Coach / Driver",
     image: "./images/athletes/sclunie/sc-pfp.jpg",
     details: {
       dateOfBirth: "January 31st, 2008",
@@ -374,6 +376,81 @@ export const coaches = [
     <p>In the off season, Samson does dryland workouts at the gym and spent time with coaches at Fluid Waterski training center getting ready for the Canadian summer.</p>
     
     <p><em>Samson wishes to express his gratitude to his parents, all his coaches and Sask Sport for the continued support.</em></p>
+  `
+  },
+
+];
+
+
+/**
+ * @typedef {Object} AthleteDetails
+ * @property {string} [dateOfBirth] - Date of birth (e.g., "September 2nd, 2002")
+ * @property {string} [division] - Competition division (e.g., "Elite Men", "MU17")
+ * @property {string} [instagram] - Instagram handle (e.g., "@carterlucs")
+ * @property {string} [photoCredit] - Photo credit (e.g., "@Crowderphoto")
+ * @property {string} [wwsBio] - World Water Skiers bio link
+ */
+
+/**
+ * @typedef {Object} GalleryImage
+ * @property {string} src - Image source path
+ * @property {string} [credit] - Photo credit
+ */
+
+/**
+ * @typedef {Object} Athlete
+ * @property {string} name - Athlete's full name
+ * @property {string} image - Profile image path or emoji
+ * @property {AthleteDetails} [details] - Athlete details (name, DOB, division, etc.)
+ * @property {string} bioHTML - HTML content for the bio page
+ * @property {GalleryImage[]} [galleryImages] - Optional array of action photos
+ */
+
+/**
+ * Athletes data
+ * @type {Athlete[]}
+ */export const athletes = [
+  {
+    name: "Sophie Strilchuk",
+    role: "SK Team Athlete / U17 National Team Member",
+    image: "./images/athletes/sstrilchuk/ss-pfp.jpg",
+    details: {
+      dateOfBirth: "December 21st, 2009",
+      division: "WU17",
+      instagram: "@sophiestrilchuk",
+      photoCredit: "@2echampions"
+    },
+    bioHTML: `
+    <p>Sophie Strilchuk is the SK HP Team top Female Athlete!</p>
+    
+    <p>Sophie has been skiing since she was 5 years old. She is a SaskFirst High Performance Athlete and member of the Saskatoon Waterski Club. She is a 3-event athlete.</p>
+    
+    <h3>Events for 2025</h3>
+    <ul>
+      <li>Slalom</li>
+      <li>Trick</li>
+      <li>Jump</li>
+    </ul>
+    
+    <h3>Home Training Sites</h3>
+    <ul>
+      <li>Saskatoon Waterski Club, SK</li>
+      <li>Bronson Forest Waterski Club, SK</li>
+    </ul>
+    
+    <h3>Coaches</h3>
+    <p>Carter Lucas, Boyd Hollerbaum, Thomas Daigle</p>
+    
+    <h3>Upcoming Competitions</h3>
+    <ul>
+      <li>Western Canadian Championships - Saskatoon, SK</li>
+      <li>Saskatchewan Provincials - Saskatoon, SK</li>
+    </ul>
+    
+    <h3>Travelling Plans for 2025</h3>
+    <p>Saskatoon Waterski Club, Canada</p>
+    
+    <p><em>Sophie appreciates all the people who she works with and who help her along the way and looks forward to giving back at the club in Saskatoon.</em></p>
   `
   },
   {
@@ -440,48 +517,6 @@ export const coaches = [
     <p>In the off season, Max competes at hockey and likes to work out.</p>
     
     <p><em>Max appreciates all the people who he works with and who help him along the way and looks forward to giving back at the club in Saskatoon.</em></p>
-  `
-  },
-  {
-    name: "Sophie Strilchuk",
-    image: "./images/athletes/sstrilchuk/ss-pfp.jpg",
-    details: {
-      dateOfBirth: "December 21st, 2009",
-      division: "WU17",
-      instagram: "@sophiestrilchuk",
-      photoCredit: "@2echampions"
-    },
-    bioHTML: `
-    <p>Sophie Strilchuk is the SK HP Team top Female Athlete!</p>
-    
-    <p>Sophie has been skiing since she was 5 years old. She is a SaskFirst High Performance Athlete and member of the Saskatoon Waterski Club. She is a 3-event athlete.</p>
-    
-    <h3>Events for 2025</h3>
-    <ul>
-      <li>Slalom</li>
-      <li>Trick</li>
-      <li>Jump</li>
-    </ul>
-    
-    <h3>Home Training Sites</h3>
-    <ul>
-      <li>Saskatoon Waterski Club, SK</li>
-      <li>Bronson Forest Waterski Club, SK</li>
-    </ul>
-    
-    <h3>Coaches</h3>
-    <p>Carter Lucas, Boyd Hollerbaum, Thomas Daigle</p>
-    
-    <h3>Upcoming Competitions</h3>
-    <ul>
-      <li>Western Canadian Championships - Saskatoon, SK</li>
-      <li>Saskatchewan Provincials - Saskatoon, SK</li>
-    </ul>
-    
-    <h3>Travelling Plans for 2025</h3>
-    <p>Saskatoon Waterski Club, Canada</p>
-    
-    <p><em>Sophie appreciates all the people who she works with and who help her along the way and looks forward to giving back at the club in Saskatoon.</em></p>
   `
   },
   {
