@@ -404,6 +404,9 @@ nav {
 
 .stat {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .stat-number {
