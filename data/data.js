@@ -145,38 +145,9 @@ export const coaches = [
     bio: "An Engineering graduate from Clarkson University in Potsdam, New York, a semi- Pro Water Skier (3 events), NCCP certified coach, level 3 driver, member of the Canadian National Water Ski Team, Thomas brings a wealth of competitive experience to the ski club.  In the winter months, Thomas coaches Alpine Downhill and lives in Revelstoke, BC.",
     image: "./images/coaches/tdaigle/td-pfp.jpg"
   },
-];
-
-/**
- * @typedef {Object} AthleteDetails
- * @property {string} [dateOfBirth] - Date of birth (e.g., "September 2nd, 2002")
- * @property {string} [division] - Competition division (e.g., "Elite Men", "MU17")
- * @property {string} [instagram] - Instagram handle (e.g., "@carterlucs")
- * @property {string} [photoCredit] - Photo credit (e.g., "@Crowderphoto")
- * @property {string} [wwsBio] - World Water Skiers bio link
- */
-
-/**
- * @typedef {Object} GalleryImage
- * @property {string} src - Image source path
- * @property {string} [credit] - Photo credit
- */
-
-/**
- * @typedef {Object} Athlete
- * @property {string} name - Athlete's full name
- * @property {string} image - Profile image path or emoji
- * @property {AthleteDetails} [details] - Athlete details (name, DOB, division, etc.)
- * @property {string} bioHTML - HTML content for the bio page
- * @property {GalleryImage[]} [galleryImages] - Optional array of action photos
- */
-
-/**
- * Athletes data
- * @type {Athlete[]}
- */export const athletes = [
   {
     name: "Carter Lucas",
+    role: "NCCP Level 3 Coach / Driver",
     image: "./images/athletes/clucas/clucas-pfp.jpg",
     details: {
       dateOfBirth: "September 2nd, 2002",
@@ -238,6 +209,37 @@ export const coaches = [
       }
     ]
   },
+
+];
+
+/**
+ * @typedef {Object} AthleteDetails
+ * @property {string} [dateOfBirth] - Date of birth (e.g., "September 2nd, 2002")
+ * @property {string} [division] - Competition division (e.g., "Elite Men", "MU17")
+ * @property {string} [instagram] - Instagram handle (e.g., "@carterlucs")
+ * @property {string} [photoCredit] - Photo credit (e.g., "@Crowderphoto")
+ * @property {string} [wwsBio] - World Water Skiers bio link
+ */
+
+/**
+ * @typedef {Object} GalleryImage
+ * @property {string} src - Image source path
+ * @property {string} [credit] - Photo credit
+ */
+
+/**
+ * @typedef {Object} Athlete
+ * @property {string} name - Athlete's full name
+ * @property {string} image - Profile image path or emoji
+ * @property {AthleteDetails} [details] - Athlete details (name, DOB, division, etc.)
+ * @property {string} bioHTML - HTML content for the bio page
+ * @property {GalleryImage[]} [galleryImages] - Optional array of action photos
+ */
+
+/**
+ * Athletes data
+ * @type {Athlete[]}
+ */export const athletes = [
   {
     name: "Enzo Kristian",
     image: "./images/athletes/ekristian/ek-pfp.jpg",
