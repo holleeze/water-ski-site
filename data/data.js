@@ -13,7 +13,7 @@
 export const coaches = [
   {
     name: "Ryan Dodd",
-    role: "Pro Coach",
+    role: "Guest Pro Coach",
     image: "./images/coaches/rdodd/rd-pfp.jpg",
     details: {
       hometown: "Olds, Alberta Canada",
@@ -92,7 +92,7 @@ export const coaches = [
   },
   {
     name: "Jaret Llewellyn",
-    role: "Pro Coach",
+    role: "Guest Pro Coach",
     image: "./images/coaches/jllewellyn/jl-pfp.jpg",
     details: {
       hometown: "Innisfail, Alberta, Canada",
@@ -198,7 +198,7 @@ export const coaches = [
   },
   {
     name: "Jack Critchley",
-    role: "Pro Coach",
+    role: "Guest Pro Coach",
     image: "👤",
     details: {
       hometown: "",
