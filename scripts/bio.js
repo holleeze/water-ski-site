@@ -1,5 +1,5 @@
 // scripts/bio.js
-import { coaches, athletes, boardMembers } from "../data/data.js";
+import { coaches, drivers, athletes, boardMembers } from "../data/data.js";
 
 /**
  * Calculate age from date of birth string
@@ -55,6 +55,11 @@ function findPerson(id, type) {
       people = athletes;
       typeLabel = 'Athlete';
       backLink = 'about.html#athletes';
+      break;
+    case 'driver':
+      people = drivers;
+      typeLabel = 'Driver';
+      backLink = 'about.html#drivers';
       break;
     case 'board':
       people = boardMembers;

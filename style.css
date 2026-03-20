@@ -404,6 +404,9 @@ nav {
 
 .stat {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .stat-number {
@@ -1037,7 +1040,8 @@ nav {
 }
 
 #mc_embed_signup input[type="email"],
-#mc_embed_signup input[type="text"] {
+#mc_embed_signup input[type="text"],
+#mc_embed_signup input[type="tel"] {
   width: 100%;
   padding: 1rem;
   border: 2px solid rgba(20, 108, 148, 0.2);
@@ -1050,12 +1054,14 @@ nav {
 }
 
 #mc_embed_signup input[type="email"]::placeholder,
-#mc_embed_signup input[type="text"]::placeholder {
+#mc_embed_signup input[type="text"]::placeholder,
+#mc_embed_signup input[type="tel"]::placeholder {
   color: rgba(10, 10, 10, 0.4);
 }
 
 #mc_embed_signup input[type="email"]:focus,
-#mc_embed_signup input[type="text"]:focus {
+#mc_embed_signup input[type="text"]:focus,
+#mc_embed_signup input[type="tel"]:focus {
   outline: none;
   border-color: var(--teal-bright);
 }
